@@ -1,65 +1,31 @@
-#IT Support Ticket Classification using Vertex AI
-##Overview
-This project automates the classification of IT support tickets in a university environment using a fine-tuned Gemini model on Vertex AI. Traditionally, IT issues were manually labeled into categories. This project leverages machine learning to streamline that process using historical ticket descriptions and their corresponding categories.
+#  IT Support Ticket Classification using Vertex AI
 
-Project Workflow
- 1. Google Cloud & Colab Setup
-Install and upgrade required libraries:
+This project automates the classification of IT support tickets in a university setting using a fine-tuned **Gemini model on Vertex AI**. It takes historical support queries and trains a model to predict categories such as "Network Issues", "Portal Access", or "Account & Login".
 
-bash
-Copy
-Edit
-!pip install --upgrade google-cloud-storage
-Define:
+---
 
-project_id (GCP Project ID)
+##  Overview
 
-region (e.g., us-central1)
+Manual classification of support tickets is slow and inconsistent. This project streamlines that process using:
+- Google Cloud's **Vertex AI**
+- A fine-tuned **Gemini model**
+- Training data formatted in `.jsonl`
+- Inference tested via Python in Google Colab
 
-2. Authentication & Configuration
-Authenticate Google Cloud in Colab:
+---
 
-python
-Copy
-Edit
-from google.colab import auth
-auth.authenticate_user()
-Set active project and region using gcloud CLI:
+##  Project Structure
 
-bash
-Copy
-Edit
-!gcloud config set project <your-project-id>
-!gcloud config set ai/region us-central1
-Create or connect to an existing Cloud Storage bucket.
-
-3. Data Preparation
-Upload ticket descriptions and categories from local files.
-
-Convert data into .jsonl format.
-
-Upload .jsonl files to your designated Cloud Storage bucket.
-
-4. Model Fine-Tuning (Gemini)
-Fine-tune Gemini using your .jsonl dataset from Cloud Storage.
-
-Define input/output schema (prompt-response pairs).
-
-Trigger fine-tuning via the Vertex AI Python SDK or CLI.
-
-5. Monitor Training Jobs
-View all hyperparameter tuning jobs:
-
-bash
-Copy
-Edit
-!gcloud ai hp-tuning-jobs list --region=us-central1
-Inspect specific jobs:
-
-bash
-Copy
-Edit
-!gcloud ai hp-tuning-jobs describe <job-id> --region=us-central1
-
-6. Test the Fine-Tuned Model
-Use prompt examples to test classification:
+```bash
+it-ticket-classifier/
+├── data/
+│   ├── raw_tickets.csv            # Original data
+│   ├── processed_tickets.jsonl    # Transformed data for Vertex AI
+│
+├── notebooks/
+│   ├── data_preprocessing.ipynb
+│   ├── fine_tuning_gemini.ipynb
+│   └── inference_tests.ipynb
+│
+├── README.md
+└── requirements.txt
