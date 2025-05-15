@@ -2,7 +2,7 @@ IT Support Ticket Classification using Vertex AI
 Overview
 This project automates the classification of IT support tickets in a university environment using a fine-tuned Gemini model on Vertex AI. Traditionally, IT issues were manually labeled into categories. This project leverages machine learning to streamline that process using historical ticket descriptions and their corresponding categories.
 
-🚀 Project Workflow
+Project Workflow
  1. Google Cloud & Colab Setup
 Install and upgrade required libraries:
 
@@ -60,5 +60,6 @@ bash
 Copy
 Edit
 !gcloud ai hp-tuning-jobs describe <job-id> --region=us-central1
+
 6. Test the Fine-Tuned Model
 Use prompt examples to test classification:
