@@ -1,6 +1,6 @@
 #  IT Support Ticket Classification using Vertex AI
 
-This project automates the classification of IT support tickets in a university setting using a fine-tuned **Gemini model on Vertex AI**. It takes historical support queries and trains a model to predict categories such as "Network Issues", "Portal Access", or "Account & Login".
+This project automates the classification of IT support tickets in a university setting using a fine-tuned **Gemini model on Vertex AI**. It takes historical support queries and trains a model to predict categories.
 
 ---
 
