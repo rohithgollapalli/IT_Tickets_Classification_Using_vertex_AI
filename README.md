@@ -14,13 +14,16 @@ Manual classification of support tickets is slow and inconsistent. This project 
 
 ---
 
-##  Project Structure
 
 
+## Project Structure
+
+```bash
 it-ticket-classifier/
-├── README.md                          # Project instructions
-├── Text_Classification_using_Vertex_AI.ipynb     # Main Colab notebook
-├── sample_input.csv                   # Example file for new users
+├── README.md                             # Project instructions
+├── Text_Classification_using_Vertex_AI.ipynb   # Main Colab notebook
+├── sample_input.csv                      # Example file for new users
+
 
 
 
