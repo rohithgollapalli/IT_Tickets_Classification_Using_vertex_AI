@@ -16,16 +16,12 @@ Manual classification of support tickets is slow and inconsistent. This project 
 
 ##  Project Structure
 
-```bash
+
 it-ticket-classifier/
-├── data/
-│   ├── raw_tickets.csv            # Original data
-│   ├── processed_tickets.jsonl    # Transformed data for Vertex AI
-│
-├── notebooks/
-│   ├── data_preprocessing.ipynb
-│   ├── fine_tuning_gemini.ipynb
-│   └── inference_tests.ipynb
-│
-├── README.md
-└── requirements.txt
+├── README.md                          # Project instructions
+├── Text_Classification_using_Vertex_AI.ipynb     # Main Colab notebook
+├── sample_input.csv                   # Example file for new users
+
+
+
+
